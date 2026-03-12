@@ -6,161 +6,161 @@
     <title>THE GITHUB PAGES CHOICE | MODERN WEB REVOLUTION</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;700&family=Noto+Sans+JP:wght@400;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Noto+Sans+JP:wght@400;900&display=swap');
         
         :root {
-            --gh-blue: #2ea44f; /* GitHub Green */
-            --gh-dark: #0d1117;
-            --gh-text: #c9d1d9;
+            --gh-blue: #3fb950; /* 明るめのGitHubグリーン */
+            --gh-dark: #010409; /* 漆黒 */
+            --gh-panel: #0d1117; /* 少し明るいパネル色 */
+            --gh-border: #30363d;
+            --text-main: #f0f6fc; /* パキッとした白 */
+            --text-sub: #8b949e;  /* 読みやすいグレー */
         }
 
         body {
             background-color: var(--gh-dark);
-            color: var(--gh-text);
-            font-family: 'Space Grotesk', 'Noto Sans JP', sans-serif;
+            color: var(--text-main);
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
             margin: 0;
-            overflow-x: hidden;
+            line-height: 1.6;
         }
 
-        .hero-gradient {
-            background: radial-gradient(circle at 50% 50%, rgba(46, 164, 79, 0.15) 0%, rgba(13, 17, 23, 0) 70%);
+        .hero-section {
+            background: linear-gradient(180deg, rgba(63, 185, 80, 0.05) 0%, rgba(1, 4, 9, 0) 100%);
+            border-bottom: 1px solid var(--gh-border);
         }
 
         .feature-card {
-            border: 1px solid #30363d;
-            background: rgba(22, 27, 34, 0.8);
-            transition: all 0.3s ease;
+            border: 1px solid var(--gh-border);
+            background: var(--gh-panel);
+            transition: transform 0.2s ease, border-color 0.2s ease;
         }
 
         .feature-card:hover {
             border-color: var(--gh-blue);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(46, 164, 79, 0.1);
+            transform: translateY(-2px);
         }
 
-        .accent-text { color: var(--gh-blue); font-weight: 700; }
-
-        .scanline {
-            width: 100%; height: 2px;
-            background: rgba(46, 164, 79, 0.05);
-            position: fixed;
-            animation: scan 6s linear infinite;
-            z-index: 99;
-            pointer-events: none;
+        .accent-text { color: var(--gh-blue); font-weight: 900; }
+        
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 4px 12px;
+            background: rgba(63, 185, 80, 0.1);
+            color: var(--gh-blue);
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            border: 1px solid rgba(63, 185, 80, 0.2);
         }
-        @keyframes scan { from { top: 0; } to { top: 100%; } }
 
-        .status-dot {
-            width: 8px; height: 8px;
-            background: var(--gh-blue);
-            border-radius: 50%;
-            display: inline-block;
-            margin-right: 8px;
-            box-shadow: 0 0 10px var(--gh-blue);
-            animation: pulse 2s infinite;
+        .cta-button {
+            background-color: var(--gh-blue);
+            color: #fff;
+            padding: 18px 36px;
+            font-weight: 800;
+            border-radius: 6px;
+            transition: filter 0.2s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
-        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+
+        .cta-button:hover {
+            filter: brightness(1.1);
+        }
+
+        /* 視認性のための大きなタイポグラフィ */
+        h1, h2, h3 { color: #fff; letter-spacing: -0.02em; }
     </style>
 </head>
-<body class="p-6 md:p-24 hero-gradient">
-    <div class="scanline"></div>
+<body class="antialiased">
 
-    <div class="max-w-5xl mx-auto">
-        <!-- HEADER -->
-        <header class="mb-32">
-            <div class="flex items-center mb-6 text-xs tracking-widest uppercase opacity-60">
-                <span class="status-dot"></span>
-                SYSTEM: GITHUB PAGES REVOLUTION / DR. HIROSHI LAB
+    <!-- HERO -->
+    <section class="hero-section py-20 px-6 md:py-32 md:px-24">
+        <div class="max-w-5xl mx-auto">
+            <div class="mb-10">
+                <span class="status-badge">RESONANCE ACTIVE</span>
             </div>
-            <h1 class="text-6xl md:text-9xl font-black italic leading-none mb-8">
-                <span class="text-white">STAY</span><br>
-                <span class="accent-text">STATIC.</span>
+            <h1 class="text-5xl md:text-8xl font-black mb-8 leading-[1.1]">
+                WHY GITHUB PAGES?<br>
+                <span class="accent-text">THE ULTIMATE CHOICE.</span>
             </h1>
-            <p class="text-xl md:text-3xl max-w-3xl leading-relaxed font-light">
-                「サーバー費用、セキュリティ、維持の煩わしさ」。<br>
-                それらすべてから解放される、<span class="text-white font-bold">Webの最終回答。</span>
+            <p class="text-xl md:text-2xl max-w-2xl text-gray-400 font-medium">
+                サーバー費用0円、鉄壁のセキュリティ、そして圧倒的な表示速度。<br>
+                ビジネスを加速させる「静的サイト」の革命を、あなたの手に。
             </p>
-        </header>
+        </div>
+    </section>
 
-        <!-- WHY GITHUB PAGES? -->
-        <section class="mb-40 grid grid-cols-1 md:grid-cols-2 gap-10">
-            <div>
-                <h2 class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-10">THE THREE VIRTUES</h2>
-                
-                <div class="space-y-12">
-                    <div class="feature-card p-10 rounded-xl">
-                        <h3 class="text-2xl font-bold text-white mb-4">1. COST ZERO (永久無料)</h3>
-                        <p class="text-sm opacity-70 leading-relaxed">
-                            月々のサーバーレンタル費用は不要です。GitHubの堅牢なインフラが、あなたの資産を永久に、かつ無料でホスティングします。これは単なる節約ではなく、資産を負債に変えないための知恵です。
+    <!-- CONTENT -->
+    <main class="py-20 px-6 md:py-32 md:px-24">
+        <div class="max-w-5xl mx-auto">
+            
+            <h2 class="text-xs uppercase tracking-[0.3em] text-gray-500 font-bold mb-16 text-center">CORE ADVANTAGES</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-32">
+                <div class="feature-card p-10 rounded-lg">
+                    <div class="text-4xl mb-6">💰</div>
+                    <h3 class="text-xl font-bold mb-4">COST ZERO</h3>
+                    <p class="text-sm text-gray-400">
+                        月々のレンタル費用は一切不要。GitHubが提供する最強のインフラを無料で活用。維持コストを「知性」で0にします。
+                    </p>
+                </div>
+
+                <div class="feature-card p-10 rounded-lg">
+                    <div class="text-4xl mb-6">⚡</div>
+                    <h3 class="text-xl font-bold mb-4">EX-SPEED</h3>
+                    <p class="text-sm text-gray-400">
+                        世界中どこからでも1秒以内にアクセス。検索順位（SEO）にも直結する「速さ」という絶対的な価値。
+                    </p>
+                </div>
+
+                <div class="feature-card p-10 rounded-lg">
+                    <div class="text-4xl mb-6">🛡️</div>
+                    <h3 class="text-xl font-bold mb-4">IMMORTAL</h3>
+                    <p class="text-sm text-gray-400">
+                        データベース不要。ハッキングの標的にならない「不滅」の構成。メンテナンスの手間からも完全に解放されます。
+                    </p>
+                </div>
+            </div>
+
+            <!-- PHILOSOPHY SECT -->
+            <div class="bg-blue-900/10 border border-blue-500/20 p-12 rounded-2xl mb-40">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-3xl font-black mb-6">THE "COOL" STANDARD</h2>
+                        <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+                            GitHub Pagesは、世界中のトップエンジニアがポートフォリオやドキュメントを公開する「聖地」です。<br><br>
+                            このドメインを持つことは、あなたのビジネスが現代のデジタルスタンダードに適合していることを雄弁に物語ります。
                         </p>
+                        <div class="inline-block p-4 border border-dashed border-gray-700 rounded bg-black/50 mono text-xs text-green-500">
+                            > H-CODE RESONANCE SYNCED<br>
+                            > ARCHIVE PROTECTION ENABLED
+                        </div>
                     </div>
-
-                    <div class="feature-card p-10 rounded-xl">
-                        <h3 class="text-2xl font-bold text-white mb-4">2. EXTREME SPEED (爆速)</h3>
-                        <p class="text-sm opacity-70 leading-relaxed">
-                            世界規模のCDN（Content Delivery Network）により、地球上のどこからでも一瞬でアクセス。重いWordPressサイトとは一線を画す、圧倒的なパフォーマンスをクライアントに提供します。
-                        </p>
-                    </div>
-
-                    <div class="feature-card p-10 rounded-xl">
-                        <h3 class="text-2xl font-bold text-white mb-4">3. UNBREAKABLE (不滅)</h3>
-                        <p class="text-sm opacity-70 leading-relaxed">
-                            データベースを持たない「静的サイト」には、ハッキングの入り口がありません。メンテナンス不要、アップデート不要。一度公開すれば、それはデジタルの彫刻として永遠に輝き続けます。
-                        </p>
+                    <div class="text-center italic text-2xl font-black text-white leading-snug">
+                        "スマートな選択が、<br>スマートな顧客を引き寄せる。"
                     </div>
                 </div>
             </div>
 
-            <div class="flex flex-col justify-center border-l border-gray-800 md:pl-20">
-                <h2 class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-10">THE "COOL" FACTOR</h2>
-                <p class="text-2xl font-bold text-white mb-8 italic leading-tight">
-                    "プロフェッショナルが、<br>プロフェッショナルのために選ぶ場所。"
-                </p>
-                <p class="text-sm opacity-60 leading-relaxed mb-10">
-                    GitHub Pagesは単なるホスティングではありません。それは、世界中のトップエンジニア、オープンソース開発者たちが集う、最も「クール」で「信頼される」ドメインです。<br><br>
-                    バージョン管理、AI連携、Markdownベースの洗練されたワークフロー。このシステムを選ぶこと自体が、あなたのビジネスが「最先端の知性」によって管理されている証明となります。
-                </p>
-                <div class="p-6 border border-dashed border-gray-700 rounded text-xs opacity-40 mono">
-                    $ git push origin master<br>
-                    >> REVOLUTION INJECTED.<br>
-                    >> H-CODE OPTIMIZED.
-                </div>
+            <!-- CTA -->
+            <div class="text-center py-20">
+                <h2 class="text-3xl md:text-5xl font-black mb-12">革命を開始しますか？</h2>
+                <a href="https://linux-research-group.github.io/lcp-web-construction/" class="cta-button inline-block">
+                    >> START NEGOTIATION <<
+                </a>
+                <p class="mt-8 text-xs text-gray-600 uppercase tracking-widest">LINUX-RESEARCH-GROUP / DR. HIROSHI LAB</p>
             </div>
-        </section>
 
-        <!-- H-CODE INTEGRATION -->
-        <section class="mb-40 p-12 border-2 border-green-500/30 bg-green-900/5 rounded-2xl relative overflow-hidden">
-            <div class="absolute top-0 right-0 p-8 opacity-10 text-9xl font-black text-green-500 select-none pointer-events-none italic">H-CORE</div>
-            <h2 class="text-3xl font-black text-white mb-8 uppercase italic tracking-tighter">AI + GITHUB PAGES = INFINITE SCALE</h2>
-            <p class="text-lg text-green-400 mb-8 font-bold leading-relaxed">
-                ドクターひろしの「H-CORE」技術により、GitHub Pagesの可能性はさらに拡張されます。<br>
-                AI（Gemini CLI）とのダイレクトな連携により、コンテンツの更新は会話だけで完結。<br>
-                もう、管理画面の操作に時間を奪われる必要はありません。
-            </p>
-            <div class="flex space-x-4">
-                <div class="px-4 py-2 border border-green-500/50 text-[10px] text-green-500 uppercase font-bold tracking-widest">Autonomous</div>
-                <div class="px-4 py-2 border border-green-500/50 text-[10px] text-green-500 uppercase font-bold tracking-widest">Resonance</div>
-                <div class="px-4 py-2 border border-green-500/50 text-[10px] text-green-500 uppercase font-bold tracking-widest">Efficiency</div>
-            </div>
-        </section>
+        </div>
+    </main>
 
-        <!-- CALL TO ACTION -->
-        <section class="text-center mb-40">
-            <h2 class="text-4xl font-black text-white italic mb-12 tracking-tighter uppercase">THE NEXT PHASE IS WAITING.</h2>
-            <p class="text-gray-400 mb-12 max-w-xl mx-auto text-sm leading-relaxed">
-                維持費を払い続け、セキュリティに怯える時代は終わりました。<br>
-                あなたの知的資産を、最も美しく、最も強く、最も速い形でアーカイブしましょう。
-            </p>
-            <a href="https://linux-research-group.github.io/lcp-web-construction/" class="inline-block border-2 border-white text-white px-12 py-6 text-xl font-bold hover:bg-white hover:text-black transition-all duration-300 uppercase tracking-widest">
-                >> CONTACT THE LAB <<
-            </a>
-        </section>
+    <!-- FOOTER -->
+    <footer class="py-10 px-6 border-t border-gray-800 text-center text-[10px] text-gray-600 font-bold uppercase tracking-widest">
+        &copy; 2026 GITHUB PAGES REVOLUTION / THE MANIFESTO
+    </footer>
 
-        <!-- FOOTER -->
-        <footer class="pt-20 border-t border-gray-800 flex justify-between items-center opacity-30 text-[10px] uppercase tracking-widest font-bold">
-            <div>ORG: LINUX-RESEARCH-GROUP</div>
-            <div>&copy; 2026 GITHUB PAGES REVOLUTION / DR. HIROSHI</div>
-        </footer>
-    </div>
 </body>
 </html>
