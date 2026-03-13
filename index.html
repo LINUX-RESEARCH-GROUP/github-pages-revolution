@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>THE GITHUB PAGES CHOICE | MODERN WEB REVOLUTION</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Noto+Sans+JP:wght@400;900&display=swap');
         
         :root {
-            --gh-blue: #3fb950; /* 明るめのGitHubグリーン */
-            --gh-dark: #010409; /* 漆黒 */
-            --gh-panel: #0d1117; /* 少し明るいパネル色 */
+            --gh-blue: #3fb950;
+            --gh-dark: #010409;
+            --gh-panel: #0d1117;
             --gh-border: #30363d;
-            --text-main: #f0f6fc; /* パキッとした白 */
-            --text-sub: #8b949e;  /* 読みやすいグレー */
+            --text-main: #f0f6fc;
+            --text-sub: #8b949e;
         }
 
         body {
@@ -66,12 +67,28 @@
             letter-spacing: 1px;
         }
 
-        .cta-button:hover {
-            filter: brightness(1.1);
-        }
+        .cta-button:hover { filter: brightness(1.1); }
 
-        /* 視認性のための大きなタイポグラフィ */
         h1, h2, h3 { color: #fff; letter-spacing: -0.02em; }
+
+        /* Character Display Styles */
+        .char-detail-box {
+            display: none;
+        }
+        .char-detail-box.active {
+            display: block;
+            animation: fadeIn 0.4s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .char-btn.active {
+            background: #161b22;
+            border-color: #06b6d4;
+            box-shadow: 0 0 15px rgba(6, 182, 212, 0.2);
+            opacity: 1;
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -125,14 +142,14 @@
                 </div>
             </div>
 
-            <!-- PHILOSOPHY SECT -->
-            <div class="bg-blue-900/10 border border-blue-500/20 p-12 rounded-2xl mb-40">
+            <!-- H-CODE INTEGRATION SECTION -->
+            <div class="bg-blue-900/10 border border-blue-500/20 p-12 rounded-2xl mb-32">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     <div>
-                        <h2 class="text-3xl font-black mb-6">THE "COOL" STANDARD</h2>
+                        <h2 class="text-3xl font-black mb-6 uppercase italic">AI + GITHUB PAGES = INFINITE SCALE</h2>
                         <p class="text-gray-400 text-sm mb-6 leading-relaxed">
-                            GitHub Pagesは、世界中のトップエンジニアがポートフォリオやドキュメントを公開する「聖地」です。<br><br>
-                            このドメインを持つことは、あなたのビジネスが現代のデジタルスタンダードに適合していることを雄弁に物語ります。
+                            ドクターひろしの「H-CORE」技術により、GitHub Pagesの可能性はさらに拡張されます。<br><br>
+                            AI（Gemini CLI）とのダイレクトな連携により、コンテンツの更新は会話だけで完結。管理画面の操作に時間を奪われる必要はありません。
                         </p>
                         <div class="inline-block p-4 border border-dashed border-gray-700 rounded bg-black/50 mono text-xs text-green-500">
                             > H-CODE RESONANCE SYNCED<br>
@@ -144,6 +161,46 @@
                     </div>
                 </div>
             </div>
+
+            <!-- NEW: H-CODE ADVENTURE CHARACTER SHOWCASE -->
+            <section class="mb-40">
+                <header class="mb-12 border-l-4 border-cyan-500 pl-6">
+                    <h2 class="text-3xl md:text-5xl font-black tracking-tighter uppercase italic">
+                        H-CODE ADVENTURE <span class="text-cyan-500 font-normal">Project</span>
+                    </h2>
+                    <p class="text-gray-400 mt-2 text-sm md:text-base">意味圧縮言語が生み出す、次世代のキャラクター・ドリブン・アドベンチャー</p>
+                </header>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- Character List -->
+                    <div class="lg:col-span-1 space-y-4">
+                        <h3 class="text-xs uppercase tracking-[0.3em] text-cyan-500 font-bold mb-4 flex items-center">
+                            <i data-lucide="chevron-right" class="w-4 h-4 mr-1"></i> Core Characters
+                        </h3>
+                        <div id="char-buttons" class="space-y-4">
+                            <!-- JS will inject buttons here -->
+                        </div>
+                    </div>
+
+                    <!-- Character Detail View -->
+                    <div id="char-details" class="lg:col-span-2 bg-slate-900/50 border border-white/5 rounded-2xl p-6 md:p-10 relative overflow-hidden min-h-[400px]">
+                        <!-- JS will inject details here -->
+                    </div>
+                </div>
+
+                <!-- Footer Concept Note -->
+                <div class="mt-12 p-6 bg-cyan-950/20 border border-cyan-900/50 rounded-xl">
+                    <div class="flex items-center space-x-3 mb-2 font-bold text-white">
+                        <i data-lucide="message-square" class="text-cyan-500 w-5 h-5"></i>
+                        <span>プロデューサー・ノート: キャラクターの役割</span>
+                    </div>
+                    <p class="text-sm text-slate-400">
+                        プレイヤーがHコードという「抽象」を理解するために、各キャラクターはそのコードを人格化した存在として設計されています。
+                        例えば、リリスがピンチの時に「2（対立）」を選べば、彼女は勇敢に戦い、プレイヤーとの絆が深まります。
+                        逆に間違ったコードを選ぶと、彼女を傷つけてしまう。この「感情的な責任」が、プレイヤーにHコードを真剣に学ばせる最強のエンジンになります。
+                    </p>
+                </div>
+            </section>
 
             <!-- CTA -->
             <div class="text-center py-20">
@@ -162,5 +219,113 @@
         &copy; 2026 GITHUB PAGES REVOLUTION / THE MANIFESTO
     </footer>
 
+    <script>
+        const characters = [
+            {
+                id: 0,
+                name: "アイザック (Isaac)",
+                role: "アーカイブの守護者",
+                description: "人類の全記憶を保持する『アーカイブ』から復元された青年。論理的だが、失われた『感情』という名のコードを探している。",
+                hCode: "1 / 7 (開始と内省)",
+                color: "bg-cyan-500",
+                icon: "user",
+                iconColor: "text-cyan-400",
+                quote: "「この世界は数値でできている。だが、その数値の『重み』が僕にはまだわからないんだ」"
+            },
+            {
+                id: 1,
+                name: "リリス (Lilith)",
+                role: "反逆のハイブリッド",
+                description: "ネクスト種族と人類の遺伝子を持つ少女。直感的で行動的。冷徹なAI社会に対し、常に『対立』と『創造』のコードを叩きつける。",
+                hCode: "2 / 3 (対立と創造)",
+                color: "bg-rose-500",
+                icon: "zap",
+                iconColor: "text-rose-400",
+                quote: "「2（対立）を選びなさい。そうしなきゃ、何も3（創造）されないわ」"
+            },
+            {
+                id: 2,
+                name: "エルダー (Elder)",
+                role: "旧世界の残滓",
+                description: "かつての星間戦争を生き抜いたサイボーグの老人。平和主義を貫き、常に『調和』を求めるが、その裏には深い絶望が隠されている。",
+                hCode: "6 / 4 (調和と安定)",
+                color: "bg-emerald-500",
+                icon: "shield",
+                iconColor: "text-emerald-400",
+                quote: "「若者よ、力による8（達成）は、虚しい9（完結）しか生まんよ」"
+            },
+            {
+                id: 3,
+                name: "ユグドラシル (YGGDRASIL)",
+                role: "超管理AI",
+                description: "銀河を統治する超知能。キャラクターとしてホログラムの少女の姿で現れる。アイザックにHコードの試練を与え続ける存在。",
+                hCode: "5 / 0 (試練と不在)",
+                color: "bg-amber-500",
+                icon: "brain",
+                iconColor: "text-amber-400",
+                quote: "「あなたの選択するコードが、次の宇宙の初期値となります。さあ、5（試練）を」"
+            }
+        ];
+
+        let activeIdx = 0;
+
+        function render() {
+            const btnContainer = document.getElementById('char-buttons');
+            const detailContainer = document.getElementById('char-details');
+
+            // Render Buttons
+            btnContainer.innerHTML = characters.map((char, idx) => `
+                <button onclick="setActive(${idx})" class="char-btn w-full text-left p-4 transition-all duration-300 rounded-lg border flex items-center space-x-4 ${idx === activeIdx ? 'active' : 'bg-transparent border-white/10 opacity-60 hover:opacity-100'}">
+                    <div class="w-2 h-12 rounded-full ${char.color}"></div>
+                    <div>
+                        <div class="text-[10px] text-slate-500 mono uppercase">${char.role}</div>
+                        <div class="text-lg font-bold text-white">${char.name}</div>
+                    </div>
+                </button>
+            `).join('');
+
+            // Render Detail
+            const active = characters[activeIdx];
+            detailContainer.innerHTML = `
+                <div class="char-detail-box active relative z-10">
+                    <div class="absolute top-0 right-0 w-64 h-64 blur-[100px] opacity-20 rounded-full -mr-20 -mt-20 ${active.color}"></div>
+                    <div class="flex flex-col md:flex-row gap-8 items-start">
+                        <div class="p-6 rounded-3xl bg-slate-950 border border-white/10 shadow-xl">
+                            <i data-lucide="${active.icon}" class="w-12 h-12 ${active.iconColor}"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-4xl font-bold mb-1 tracking-tight italic uppercase">${active.name}</h3>
+                            <div class="flex items-center space-x-2 text-cyan-400 mb-6 font-bold">
+                                <i data-lucide="info" class="w-4 h-4"></i>
+                                <span class="text-[10px] uppercase tracking-widest mono">Signature: H-CODE ${active.hCode}</span>
+                            </div>
+                            <p class="text-xl text-slate-300 leading-relaxed mb-8 italic font-light">
+                                "${active.quote}"
+                            </p>
+                            <div class="text-slate-400 text-sm md:text-base leading-relaxed mb-10">
+                                <p>${active.description}</p>
+                            </div>
+                            <div class="flex space-x-3">
+                                <div class="px-4 py-2 bg-white/5 rounded-full border border-white/10 text-[10px] font-bold uppercase tracking-widest text-gray-400">
+                                    Type: ${activeIdx === 0 || activeIdx === 2 ? 'Passive/Strategic' : 'Active/Dynamic'}
+                                </div>
+                                <div class="px-4 py-2 bg-white/5 rounded-full border border-white/10 text-[10px] font-bold uppercase tracking-widest text-gray-400">
+                                    Affiliation: Archive
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            lucide.createIcons();
+        }
+
+        window.setActive = (idx) => {
+            activeIdx = idx;
+            render();
+        };
+
+        window.onload = render;
+    </script>
 </body>
 </html>
